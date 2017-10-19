@@ -1,0 +1,19 @@
+Disable hibernation:
+------------------------------------------------------------------------------
+ o  Run cmd as admin and execute:
+
+      powercfg -h off
+
+
+Disable swapping
+------------------------------------------------------------------------------
+ o  Press Win + Pause
+ o  Click Advanced system settings
+ o  Go to the Advanced tab
+ o  Press the Settings button under Performance
+ o  Go to the Advanced tab
+ o  Click the Change button
+ o  Uncheck "Automatically manage paging file size for all drives"
+ o  Select "No paging file" and press "Set"
+ o  Select "Yes" and press "OK" in all opened dialog windows
+ o  Reboot
