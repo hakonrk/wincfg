@@ -4,7 +4,6 @@ Disable hibernation:
 
       powercfg -h off
 
-
 Disable swapping
 ------------------------------------------------------------------------------
  o  Press Win + Pause
@@ -17,3 +16,24 @@ Disable swapping
  o  Select "No paging file" and press "Set"
  o  Select "Yes" and press "OK" in all opened dialog windows
  o  Reboot
+
+Disable system restore
+------------------------------------------------------------------------------
+ o  System properties → System protection
+ o  Set Protection = off for all drives
+ o  Do this by clicking Configure, then Disable system protection,
+    then Delete all restore points for this drive
+
+Enable TRIM
+------------------------------------------------------------------------------
+ o  Make sure TRIM is enabled:
+      fsutil behavior query DisableDeleteNotify
+
+    This should output 0 (zero). If not, set it with:
+      fsutil behavior set DisableDeleteNotify 0
+
+Install VirtIO (for QEMU)
+------------------------------------------------------------------------------
+ o  Get the latest Spice Guest Tools:
+    https://www.spice-space.org/download/windows/spice-guest-tools/spice-guest-tools-latest.exe
+    Install to get better display resolution.
