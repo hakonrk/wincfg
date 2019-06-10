@@ -37,3 +37,9 @@ Install VirtIO (for QEMU)
  o  Get the latest Spice Guest Tools:
     https://www.spice-space.org/download/windows/spice-guest-tools/spice-guest-tools-latest.exe
     Install to get better display resolution.
+
+Disable login password
+------------------------------------------------------------------------------
+ o  Run netplwiz
+ o  In the "Users" tab, uncheck "Users must enter a username and
+    password to use this computer".
