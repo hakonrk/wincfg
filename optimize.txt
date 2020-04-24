@@ -1,6 +1,6 @@
 Disable hibernation:
 ------------------------------------------------------------------------------
- o  Run cmd as admin and execute:
+ o  Run cmd as admin (Ctrl+Shift+Enter in the Run box) and execute:
 
       powercfg -h off
 
@@ -24,6 +24,24 @@ Disable system restore
  o  Do this by clicking Configure, then Disable system protection,
     then Delete all restore points for this drive
 
+Disable login password
+------------------------------------------------------------------------------
+ o  Run netplwiz
+ o  In the "Users" tab, uncheck "Users must enter a username and
+    password to use this computer".
+
+Disable User Account Control
+------------------------------------------------------------------------------
+ o  Search for UAC in the search field on the taskbar
+ o  Click "Change User Account Control settings"
+ o  Drag the slider to "Never notify" and click OK
+
+Inform Windows that the BIOS clock is UTC
+------------------------------------------------------------------------------
+ o  Run cmd as admin (Ctrl+Shift+Enter in the Run box) and execute:
+
+      reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_QWORD /f
+
 Enable TRIM
 ------------------------------------------------------------------------------
  o  Make sure TRIM is enabled:
@@ -37,9 +55,3 @@ Install VirtIO (for QEMU)
  o  Get the latest Spice Guest Tools:
     https://www.spice-space.org/download/windows/spice-guest-tools/spice-guest-tools-latest.exe
     Install to get better display resolution.
-
-Disable login password
-------------------------------------------------------------------------------
- o  Run netplwiz
- o  In the "Users" tab, uncheck "Users must enter a username and
-    password to use this computer".
